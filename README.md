@@ -20,7 +20,7 @@ This webpage utilizes advanced CSS styling and animations. It is highly responsi
 
 ## Deployed Webpage
 
-![Screenshot](\assets\Screenshot.png)
+![Screenshot](./assets/Screenshot.png)
 
 ## Links
 
