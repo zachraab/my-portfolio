@@ -52,10 +52,10 @@ This webpage utilizes advanced CSS styling and animations. It is highly responsi
 
 # TO DO
 
-Repository follows best practices for file structure and naming conventions.
+~~Repository follows best practices for file structure and naming conventions.~~
 
-Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+~~Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.~~
 
-Repository contains multiple descriptive commit messages.
+~~Repository contains multiple descriptive commit messages.~~
 
 ~~Repository contains quality readme with description, screenshot, link to deployed application.~~
