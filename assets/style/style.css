@@ -1,0 +1,313 @@
+* {
+  color: white;
+  cursor: default;
+  margin: 0;
+}
+body {
+  background-color: cornflowerblue;
+}
+
+#logo {
+  color: violet;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin: 0;
+  font-size: 2rem;
+  justify-content: space-between;
+  background-image: url(https://images.unsplash.com/photo-1531315630201-bb15abeb1653?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);
+  background-repeat: repeat;
+  border-bottom: yellow solid 5px;
+}
+
+nav a {
+  color: violet;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+  text-decoration: none;
+  margin: 20px;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: white;
+  background-color: violet;
+  transition-duration: 1s;
+}
+
+h1::after {
+  content: "Raab";
+  color: white;
+}
+
+h1,
+h2 {
+  color: violet;
+}
+main section p {
+  /* top right bottom left */
+  padding: 180px 50px 50px 50px;
+}
+
+p::first-line {
+  text-indent: 50px;
+  color: violet;
+}
+
+#workflex {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 115px;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* project items */
+div {
+  background-color: violet;
+  height: 200px;
+  width: 200px;
+  margin: 30px;
+  position: relative;
+  border: solid yellow 5px;
+  border-radius: 20px;
+}
+
+header img {
+  width: 25%;
+  height: 25%;
+}
+
+/* Maria! :) */
+div img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  border-radius: 20px;
+  margin: 0;
+  object-fit: cover;
+}
+
+div:hover img {
+  opacity: 1;
+  transition-duration: 1s;
+  box-shadow: 0px 0px 30px 30px black;
+  transform: scale(2) rotate(360deg);
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+div:hover .imgtext {
+  display: none;
+  transition-duration: 1s;
+}
+
+.imgtext {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  padding: 5px;
+  background-color: darkcyan;
+  border-radius: 10px 10px 0 0;
+  transform: skewY(10deg);
+}
+
+.sidebar {
+  border-right: solid darkcyan 5px;
+  padding: 20px;
+  flex: 2 4 1500px;
+  min-width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-decoration: underline yellow 4px;
+}
+
+#showcase {
+  width: 100%;
+}
+.row {
+  align-items: stretch;
+}
+
+#column {
+  flex-direction: column;
+}
+
+aside h2 {
+  margin: 140px 20px;
+}
+
+footer {
+  padding: 40px;
+  border-top: solid yellow 5px;
+}
+
+footer p {
+  text-align: center;
+}
+
+li {
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    font-size: 1.5rem;
+  }
+  nav a {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  header {
+    font-size: 1rem;
+  }
+  nav a {
+    padding: 6px;
+  }
+  #workflex {
+    padding-top: 115px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    font-size: 0.75rem;
+  }
+  nav a {
+    padding: 4px;
+  }
+
+  header img {
+    width: 20%;
+    height: 20%;
+  }
+  nav a {
+    margin: 16px;
+  }
+  footer {
+    font-size: smaller;
+  }
+
+  main section p {
+    font-size: smaller;
+    padding: 150px 30px 30px;
+  }
+
+  aside h2 {
+    margin: 100px 20px;
+    font-size: 1rem;
+  }
+
+  div {
+    height: 180px;
+    width: 180px;
+    margin: 20px;
+  }
+
+  #workflex {
+    padding-top: 80px;
+  }
+
+  .imgtext {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav a {
+    padding: 2px;
+    margin: 12px;
+  }
+  aside h2 {
+    margin: 80px 10px;
+    font-size: 0.75rem;
+  }
+  footer {
+    font-size: x-small;
+  }
+  main section p {
+    font-size: x-small;
+    padding: 110px 20px 20px;
+  }
+  div {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+  }
+  #workflex {
+    padding-top: 75px;
+  }
+
+  .imgtext {
+    font-size: smaller;
+  }
+  header img {
+    width: 15%;
+    height: 15%;
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .sidebar {
+    font-size: 9px;
+  }
+  footer {
+    font-size: xx-small;
+  }
+  main section p {
+    font-size: xx-small;
+    padding: 70px 10px 10px;
+  }
+  div {
+    height: 100px;
+    width: 100px;
+    border: solid yellow 3px;
+    margin: 5px;
+  }
+  #workflex {
+    padding-top: 50px;
+  }
+
+  .imgtext {
+    font-size: x-small;
+  }
+  header img {
+    width: 10%;
+    height: 10%;
+  }
+  nav a {
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: 407px) {
+  header {
+    font-size: 0.5rem;
+  }
+  nav a {
+    margin: 4px;
+  }
+  div {
+    height: 75px;
+    width: 75px;
+    border: solid yellow 1px;
+  }
+  #workflex {
+    padding-top: 25px;
+  }
+
+  .imgtext {
+    font-size: xx-small;
+  }
+}

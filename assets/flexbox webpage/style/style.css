@@ -1,0 +1,94 @@
+:root {
+  --colortext: rgba(232, 102, 236, 1);
+  --background: rgb(37, 37, 37);
+}
+
+* {
+  color: white;
+}
+
+html {
+  /* set 1rem to 10px instead of native 16px to make it easier to calculate the font-size values for the rest of the page */
+  font-size: 62.5%;
+}
+
+body {
+  /* set body font to 1.75 which is 17.5 pixels */
+  background-color: var(--background);
+  font-size: 1.75rem;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  color: var(--colortext);
+}
+
+section div > p {
+  color: var(--colortext);
+}
+
+code {
+  color: var(--normal);
+  font-family: monospace;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-column {
+  flex: 1 0 100%;
+}
+
+.card {
+  border: dashed white;
+  margin: 20px;
+  width: 400px;
+  flex: 1, 0, 100%;
+}
+
+.card-header {
+  position: relative;
+  margin-top: -20px;
+  border: white solid;
+  border-radius: 50px;
+  background-color: var(--background);
+}
+
+/* .card-body {
+} */
+
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(12, lfr);
+}
+
+.linear-gradient-background {
+  background-image: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
+}
+
+.code-card .card-header {
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.code-card:hover,
+.code-card:hover .card-header {
+  box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1),
+    0 0 15px rgba(232, 102, 236, 1);
+}
