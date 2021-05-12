@@ -14,33 +14,18 @@ This webpage utilizes advanced CSS styling and animations. It is highly responsi
 
 ## Table of Contents
 
-- [Deployed Webpage](#Deployed-Webpage)
-- [Credits](#Credits)
+- [Links](#Links)
 - [Features](#Features)
 
 ## Deployed Webpage
 
-![Screenshot](./assets/Screenshot.png)
+![Screenshot of website](<./assets/images/Screenshot-(1).png>)
+![Second screenshot of website](<./assets/images/Screenshot-(2).png>)
 
 ## Links
 
 - [Deployed](https://zachraab.github.io/my-portfolio/)
 - [GitHub Repo](https://github.com/zachraab/my-portfolio)
-
-## Credits
-
-- Instructors:
-
-  - Ben Machock
-  - Maria
-  - Leonardo Silva
-  - Zac Stowell
-
-- Collaborators:
-
-  - TJ Courey
-  - Alex Jurgs
-  - Jack Neuner
 
 ## Features
 
