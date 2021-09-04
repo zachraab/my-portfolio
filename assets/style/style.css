@@ -101,7 +101,7 @@ p::first-line {
 
 /* clickable image styling */
 div {
-  background-color: violet;
+  background-image: linear-gradient(to bottom, yellow, violet);
   height: 200px;
   width: 200px;
   margin: 30px;
@@ -121,51 +121,38 @@ header img {
   height: 25%;
 }
 
-/* Maria! :) */
 div img {
   width: 100%;
   height: 100%;
-  opacity: 0.3;
   border-radius: 15px;
   margin: 0;
   object-fit: cover;
-}
-
-div a:focus img {
-  opacity: 1;
-  transform: unset;
-}
-
-div:hover #transform {
-  opacity: 1;
+  filter: saturate(0%);
+  transform: scale(1);
   transition-duration: 1s;
-  box-shadow: 0px 0px 30px 30px black;
-  transform: scale(2) rotate(360deg);
+}
+
+div:hover .transform {
+  filter: saturate(100%);
+  transition-duration: 1s;
+  box-shadow: 0px 0px 30px 10px black;
+  transform: scale(2);
   position: absolute;
   z-index: 2;
   cursor: pointer;
 }
 
-div:hover .imgtext {
-  display: none;
-}
-
-div img:active {
-  filter: saturate(0%);
-}
-
-div:active {
-  transform: scale(0.9);
-}
-
 .imgtext {
   position: absolute;
   top: 15px;
-  left: 0px;
+  left: 0;
   padding: 5px;
+  margin: 5px;
   background-color: darkcyan;
+  box-shadow: black 0 0 10px;
   border-radius: 10px 10px 0 0;
   transform: skewY(10deg);
+  text-align: center;
 }
 
 #showcase {
@@ -173,9 +160,42 @@ div:active {
 }
 
 #showcase img:hover {
-  opacity: 1;
+  filter: saturate(100%);
   transition-duration: 1s;
   cursor: pointer;
+}
+
+#links {
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+#links a {
+  color: violet;
+  background-color: white;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+#links a:hover {
+  cursor: pointer;
+  text-shadow: yellow 0 0 5px, black 0 0 1px;
+}
+
+#links a:active,
+a:focus {
+  box-shadow: inset darkcyan 0 0 10px;
 }
 
 /* aside bar styling */

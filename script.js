@@ -1,6 +1,7 @@
 $(document).ready(function () {
   let topBtn = $("#top-btn");
   let avatar = $("#avatar");
+  let transform = $(".transform");
 
   avatar.mouseenter(function () {
     avatar.css({
@@ -22,7 +23,6 @@ $(document).ready(function () {
   function scrollDown() {
     if (document.documentElement.scrollTop > 20) {
       topBtn.css("display", "block");
-      console.log("scrolling");
     } else {
       topBtn.css("display", "none");
     }
@@ -31,5 +31,14 @@ $(document).ready(function () {
 
   topBtn.on("click", function () {
     document.documentElement.scrollTop = 0;
+  });
+
+  transform.on("click", function (event) {
+    $(event.target).css({
+      opacity: "0",
+      cursor: "default",
+      "z-index": "-1",
+      transform: "scale(1) rotate(360deg)",
+    });
   });
 });
