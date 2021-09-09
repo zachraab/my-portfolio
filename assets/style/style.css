@@ -110,15 +110,92 @@ p::first-line {
 
 /* diamonds */
 #diamond-1 {
-  height: 5vw;
-  width: 7.5vw;
+  height: 0;
+  width: 0;
+  left: 50%;
+  top: 50%;
   position: absolute;
-  /* transform: skewY(45deg); */
-  background-color: red;
-  transform: rotate(45deg);
+  border: 7vw solid transparent;
+  border-bottom: 10vw solid darkcyan;
+  transform: translatex(-50%);
+}
+
+#diamond-1::after {
+  content: "";
+  position: absolute;
+  left: -7vw;
+  top: 10vw;
+  height: 0;
+  width: 0;
+  border: 7vw solid transparent;
+  border-top: 10vw solid darkcyan;
+}
+
+#diamond-2 {
+  height: 0;
+  width: 0;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  border: 5vw solid transparent;
+  border-bottom: 7vw solid violet;
+  transform: translatex(-50%);
+}
+
+#diamond-2::after {
+  content: "";
+  position: absolute;
+  left: -5vw;
+  top: 7vw;
+  height: 0;
+  width: 0;
+  border: 5vw solid transparent;
+  border-top: 7vw solid yellow;
+  transition-duration: 1s;
+}
+
+#diamond-2::before {
+  content: "";
+  position: absolute;
+  width: 10vw;
+  height: 2vw;
+  top: 3.5vw;
+  left: -5vw;
+  background-image: linear-gradient(to left, violet, cornflowerblue 50%);
+  transform: skewX(35deg);
+  transition-duration: 1s;
+}
+
+#diamond-2:hover::before {
+  width: 17vw;
+  transition-duration: 1s;
+}
+
+#diamond-2:hover::after {
+  top: 14vw;
+  transition-duration: 1s;
+}
+#diamond-glow {
+  position: absolute;
+  height: 7vw;
+  width: 7vw;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  background-image: radial-gradient(
+    circle,
+    cornflowerblue 30%,
+    yellow,
+    transparent 40%
+  );
+  transform: translate(-50%, 50%);
 }
 
 /* triangles */
+#triangle-parent {
+  position: relative;
+}
+
 #triangle-1 {
   z-index: -1;
   height: 0;
@@ -133,6 +210,7 @@ p::first-line {
   height: 0;
   width: 0;
   left: 50%;
+  transform: translateX(-50%);
   border-right: 10vw solid transparent;
   border-top: 10vw solid yellow;
   border-left: 10vw solid transparent;
@@ -143,6 +221,7 @@ p::first-line {
   height: 0;
   width: 0;
   left: 40%;
+  transform: translateX(-50%);
   border-right: 10vw solid transparent;
   border-top: 10vw solid violet;
   border-left: 10vw solid transparent;
@@ -153,10 +232,35 @@ p::first-line {
   height: 0;
   width: 0;
   left: 60%;
+  transform: translateX(-50%);
+
   border-right: 10vw solid transparent;
   border-top: 10vw solid violet;
   border-left: 10vw solid transparent;
   position: absolute;
+}
+#triangle-5 {
+  height: 0;
+  width: 0;
+  left: 50%;
+  position: absolute;
+  border: 7vw solid transparent;
+  border-bottom: 7vw solid violet;
+  transform: translatex(-50%);
+}
+
+#triangle-5::after {
+  content: "";
+  height: 0;
+  width: 0;
+  left: 50%;
+  position: absolute;
+  border: 7vw solid transparent;
+  border-top: 7vw solid darkcyan;
+  background-image: linear-gradient(violet, transparent);
+  box-shadow: 0 0 10px inset black;
+  border-radius: 50%;
+  transform: translatex(-50%);
 }
 
 /* circles */
@@ -195,7 +299,7 @@ p::first-line {
   border-top-right-radius: 50%;
   border-top: yellow 0.4vw solid;
   overflow: hidden;
-  transform: skewY(10deg) translateX(00%);
+  transform: skewY(10deg) translateX(20%);
 }
 
 /* SUN */
@@ -375,7 +479,7 @@ a:focus {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  /* text-decoration: underline yellow 4px; */
+  position: relative;
 }
 
 aside h2 {
@@ -384,15 +488,23 @@ aside h2 {
 }
 
 #footer-container {
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 40px;
 }
 
+#contact-headline {
+  width: min-content;
+  font-size: 3vw;
+  margin-top: 20vw;
+  margin-left: 3vw;
+}
+
 #contact-info {
-  margin-left: 10%;
   border: solid 0.4vw darkcyan;
-  border-top-left-radius: 15px;
+  border-top-left-radius: 50px;
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 50%;
@@ -409,6 +521,8 @@ aside h2 {
 footer {
   border-top: solid darkcyan 5px;
   height: 10vw;
+  box-shadow: 0 20px 30px 0.4px darkcyan;
+  position: relative;
 }
 
 #contact-name {
