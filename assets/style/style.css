@@ -123,6 +123,8 @@ p::first-line {
   border: 7vw solid transparent;
   border-bottom: 10vw solid darkcyan;
   transform: translatex(-50%);
+  transition-delay: 0.5s;
+  transition-duration: 1s;
 }
 
 #diamond-1::after {
@@ -189,6 +191,20 @@ p::first-line {
   transition-duration: 1s;
 }
 
+#helper {
+  /* background: black; */
+  height: 23vw;
+  width: 15vw;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, 20%);
+}
+
+#diamond-container {
+  background: red;
+}
+
 #diamond-container:hover #diamond-2::before {
   width: 17vw;
   transition-duration: 1s;
@@ -204,7 +220,6 @@ p::first-line {
   height: 4vw;
   width: 4vw;
   box-shadow: yellow 0 0 40px;
-
   transition-duration: 1s;
 }
 
@@ -212,6 +227,13 @@ p::first-line {
   height: 7.5vw;
   width: 7.5vw;
   transform: translate(-50%, 11.75vw);
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+#diamond-container:hover #diamond-1 {
+  border-bottom: 7vw solid darkcyan;
+  transition-delay: 0.5s;
   transition-duration: 1s;
 }
 
