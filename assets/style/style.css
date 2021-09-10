@@ -31,6 +31,11 @@ h2 {
   justify-content: center;
 }
 
+/* .relative {
+  position: relative absolute;
+  background-color: black;
+} */
+
 .row {
   align-items: stretch;
 }
@@ -108,7 +113,7 @@ p::first-line {
 
 /* styled div's */
 
-/* diamonds */
+/* DIAMONDS */
 #diamond-1 {
   height: 0;
   width: 0;
@@ -166,15 +171,6 @@ p::first-line {
   transition-duration: 1s;
 }
 
-#diamond-2:hover::before {
-  width: 17vw;
-  transition-duration: 1s;
-}
-
-#diamond-2:hover::after {
-  top: 14vw;
-  transition-duration: 1s;
-}
 #diamond-glow {
   position: absolute;
   height: 7vw;
@@ -188,7 +184,41 @@ p::first-line {
     yellow,
     transparent 40%
   );
+  box-shadow: yellow 0 0 10px;
   transform: translate(-50%, 50%);
+  transition-duration: 1s;
+}
+
+#diamond-container:hover #diamond-2::before {
+  width: 17vw;
+  transition-duration: 1s;
+}
+
+#diamond-container:hover #diamond-2::after {
+  top: 14vw;
+
+  transition-duration: 1s;
+}
+
+#diamond-container:hover #diamond-glow {
+  height: 4vw;
+  width: 4vw;
+  box-shadow: yellow 0 0 40px;
+
+  transition-duration: 1s;
+}
+
+#diamond-container:hover #circle-2 {
+  height: 7.5vw;
+  width: 7.5vw;
+  transform: translate(-50%, 11.75vw);
+  transition-duration: 1s;
+}
+
+#diamond-container:active #circle-2 {
+  transform: translate(-50%, 11.75vw) scale(0.25) skew(45deg, 45deg)
+    rotate(360deg);
+  transition-duration: 0.5s;
 }
 
 /* triangles */
@@ -280,11 +310,31 @@ p::first-line {
   );
 }
 
+#circle-2 {
+  /* z-index: -1; */
+  height: 0vw;
+  width: 0vw;
+  /* top: 7vw; */
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, 11.75vw) skew(0, 0) scale(1) rotate(0deg);
+  background-image: linear-gradient(
+    to bottom,
+    violet 10%,
+    darkcyan,
+    yellow 90%
+  );
+  transition-duration: 1s;
+}
+
 /* stripes */
 #stripe-1 {
   z-index: -2;
   height: 20vw;
   width: 100%;
+  /* top: 80%; */
   bottom: -5vw;
   right: 50%;
   transform: skewY(-26deg) translate(50%, 50%);
@@ -300,6 +350,16 @@ p::first-line {
   border-top: yellow 0.4vw solid;
   overflow: hidden;
   transform: skewY(10deg) translateX(20%);
+}
+#stripe-3 {
+  z-index: -2;
+  height: 20vw;
+  width: 100%;
+  bottom: -5vw;
+  right: 50%;
+  transform: skewY(-26deg) translate(50%, 50%);
+  position: absolute;
+  background-image: linear-gradient(to bottom right, yellow, cornflowerblue);
 }
 
 /* SUN */
