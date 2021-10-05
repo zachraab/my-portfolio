@@ -17,7 +17,12 @@ body {
 
 main section p {
   font-size: 2rem;
-  margin-top: 50px;
+  margin-top: 5vw;
+}
+
+main section p:last-of-type {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 h1,
@@ -457,10 +462,16 @@ p::first-line {
   background-image: linear-gradient(to bottom, yellow, violet);
   height: 20vw;
   width: 20vw;
-  margin: 30px;
+  margin: 3vw;
+  margin-bottom: 6vw;
   position: relative;
   border: solid yellow 0.4vw;
   border-radius: 20px;
+}
+
+.card p small {
+  font-size: 1vw;
+  white-space: nowrap;
 }
 
 #workflex {
@@ -570,7 +581,7 @@ a:focus {
 }
 
 aside h2 {
-  margin: 200px 20px;
+  margin: 20vw 2vw;
   font-size: 3vw;
 }
 
