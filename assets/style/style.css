@@ -67,9 +67,10 @@ header {
   margin: 0;
   font-size: 2rem;
   justify-content: space-between;
-  background-image: url(https://images.unsplash.com/photo-1531315630201-bb15abeb1653?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);
+  /* background-image: url(https://images.unsplash.com/photo-1531315630201-bb15abeb1653?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: darkcyan;
   border-bottom: yellow solid 5px;
 }
 
@@ -107,8 +108,7 @@ nav a:focus {
 }
 
 main section p {
-  /* top right bottom left */
-  padding: 180px 50px 50px 50px;
+  padding: 18vw 5vw 5vw 5vw;
 }
 
 p::first-line {
@@ -589,7 +589,7 @@ aside h2 {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   padding: 40px;
 }
 
@@ -613,7 +613,6 @@ aside h2 {
     violet
   );
   padding: 2vw 6vw;
-  text-align: center;
 }
 
 footer {
