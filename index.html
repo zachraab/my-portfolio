@@ -1,276 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="./assets/style/style.css" />
-  </head>
-  <body>
-    <header>
-      <!-- Logo and Avatar Image -->
-      <h1 id="logo">Zach</h1>
-      <img id="avatar" src="./assets/images/photo-by-water.jpg" alt="avatar" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Portfolio</title>
+		<link rel="stylesheet" href="./assets/style/style.css" />
+	</head>
+	<body>
+		<header>
+			<!-- Logo and Avatar Image -->
+			<h1 id="logo">Zach</h1>
+			<h3>Full-Stack Developer</h3>
+		</header>
+		
+		<!-- Main Container for all content between header and footer -->
+		<main class="flex-container row">
+			<!-- Left Sidebar with Headers -->
+			<aside class="sidebar">
+				<div>
+					<img id="avatar" src="./assets/images/photo-by-water.jpg" alt="avatar" />
+					<h2>Hello!</h2>
+				</div>
+				<div id="diamond-container">
+					<div id="helper"></div>
+					<div id="diamond-glow"></div>
+					<div id="diamond-1"></div>
+					<div id="diamond-2"></div>
+				</div>
+			</aside>
 
-      <!-- Webpage Navigation Buttons -->
-      <nav>
-        <a class="nav" href="#aboutme">About Me</a>
-        <a class="nav" href="#work">Work</a>
-        <a class="nav" href="#contact-headline">Contact</a>
-      </nav>
-    </header>
+			<section id="column" class="flex-container">
+				<!-- triangles -->
+				<div id="triangle-parent">
+					<div id="triangle-1"></div>
+				</div>
 
-    <!-- Main Container for all content between header and footer -->
-    <main class="flex-container row">
-      <!-- Left Sidebar with Headers -->
-      <aside class="sidebar">
-        <h2 id="aboutme">Hello!</h2>
-        <h2 id="work">Work</h2>
-        <div id="diamond-container">
-          <div id="helper"></div>
-          <div id="diamond-glow"></div>
-          <div id="diamond-1"></div>
-          <div id="circle-2"></div>
-          <div id="diamond-2"></div>
-        </div>
-      </aside>
+				<div>
+					<div id="circle-1"></div>
+					<div id="stripe-1"></div>
+				</div>
 
-      <section id="column" class="flex-container">
-        <!-- triangles -->
-        <div id="triangle-parent">
-          <div id="triangle-1"></div>
-        </div>
+				<!-- Images with embedded links to external webpages -->
+				<section id="workflex" class="flex-container">
+					<div class="card" id="showcase">
+						<!-- Sun -->
+						<div id="sun"></div>
+						<!-- Cloud -->
 
-        <div>
-          <div id="circle-1"></div>
-          <div id="stripe-1"></div>
-        </div>
+						<div id="cloud-parent">
+							<div class="cloud-component" id="cloud-1"></div>
+							<div class="cloud-component" id="cloud-2"></div>
+							<div class="cloud-component" id="cloud-3"></div>
+							<div class="cloud-component" id="cloud-4"></div>
+							<div class="cloud-component" id="cloud-5"></div>
+							<div class="cloud-component" id="cloud-6"></div>
+							<div class="cloud-component" id="cloud-7"></div>
+						</div>
+						<a href="./assets/zachraabresume.pdf">
+							<img
+								src="https://images.unsplash.com/photo-1423450822265-fcd97e52ecb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=820&q=80"
+								alt="picture of colorado welcome sign"
+							/>
+						</a>
+						<h3 class="imgtext">Resume</h3>
+					</div>
 
-        <!-- About Me Paragraph -->
-        <p>
-          Driven. Dependable. Creative.
-          <br /><strong>Full Stack Developer</strong> <br />10 years of customer
-          service and quality assurance. Dedicated, creative, solution-oriented,
-          detail-oriented and eager to learn. Highly regarded among employers
-          and clients for exceptional quality of service. Effective at working
-          both independently and on a team Recently earned a Certificate in Full
-          Stack Web Development from the University of Denver.
-        </p>
+					<div class="card">
+						<figure id="links">
+							<a href="https://github.com/Chequelito/theDailyDive"
+								>Source Code</a
+							>
+							<a href="https://chequelito.github.io/theDailyDive/"
+								>Deployed Application</a
+							>
+						</figure>
+						<img
+						class="transform"
+						src="./assets/images/project-screenshots/daily-dive.PNG"
+						alt="picture of the garden of the gods"
+						/>
+						<h3 class="imgtext">The Daily Dive</h3>
+					</div>
 
-        <p>
-          Technical Skills <br />
-          HTML - CSS - JavaScript - React - Node - Express - MongoDB - MySQL -
-          jQuery - JSON - REST API - Third-Party API Integration - Agile
-          Methodolgies - Scrum Flow - Continuous Delivery - Git
-        </p>
+					<div class="card">
+						<figure id="links">
+							<a href="https://github.com/Ajurgs/React_Adventure_Game"
+								>Source Code</a
+							>
+							<a href="https://dry-mountain-02487.herokuapp.com/"
+								>Deployed Application</a
+							>
+						</figure>
+						<img
+						class="transform"
+						src="./assets/images/project-screenshots/haunted-caverns.PNG"
+						alt="Ice Lakes Basin"
+						/>
+						<h3 class="imgtext">The Haunted Caverns</h3>
+					</div>
 
-        <!-- Images with embedded links to external webpages -->
-        <section id="workflex" class="flex-container">
-          <div class="card" id="showcase">
-            <!-- Sun -->
-            <div id="sun"></div>
-            <!-- Cloud -->
+					<div class="card">
+						<figure id="links">
+							<a href="https://github.com/zachraab/tech-blog">Source Code</a>
+							<a href="https://boiling-bastion-61605.herokuapp.com/login"
+								>Deployed Application</a
+							>
+						</figure>
+						<img
+						class="transform"
+						src="./assets/images/project-screenshots/tech-blog.PNG"
+						alt="Lone Eagle Peak"
+						/>
+						<h3 class="imgtext">Tech Blog</h3>
+					</div>
 
-            <div id="cloud-parent">
-              <div class="cloud-component" id="cloud-1"></div>
-              <div class="cloud-component" id="cloud-2"></div>
-              <div class="cloud-component" id="cloud-3"></div>
-              <div class="cloud-component" id="cloud-4"></div>
-              <div class="cloud-component" id="cloud-5"></div>
-              <div class="cloud-component" id="cloud-6"></div>
-              <div class="cloud-component" id="cloud-7"></div>
-            </div>
-            <a href="./assets/zachraabresume.pdf">
-              <img
-                src="https://images.unsplash.com/photo-1423450822265-fcd97e52ecb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=820&q=80"
-                alt="picture of colorado welcome sign"
-              />
-            </a>
-            <h3 class="imgtext">Resume</h3>
-          </div>
+					<div class="card">
+						<figure id="links">
+							<a href="https://github.com/zachraab/employee-generator"
+								>Source Code</a
+							>
+							<a
+								href="https://zachraab.github.io/employee-generator/my-team.html"
+								>Deployed Application</a
+							>
+						</figure>
+						<img
+						class="transform"
+						src="./assets/images/project-screenshots/employee-generator.PNG"
+						alt="picture of ridgeway colorado"
+						/>
+						<h3 class="imgtext">Employee Generator</h3>
+					</div>
 
-          <div class="card">
-            <figure id="links">
-              <a href="https://github.com/Chequelito/theDailyDive"
-                >Source Code</a
-              >
-              <a href="https://chequelito.github.io/theDailyDive/"
-                >Deployed Application</a
-              >
-              <p><small>Multi-API front-end application</small></p>
-            </figure>
-            <img
-              class="transform"
-              src="./assets/images/project-screenshots/daily-dive.PNG"
-              alt="picture of the garden of the gods"
-            />
-            <h3 class="imgtext">The Daily Dive</h3>
-          </div>
+					<div class="card">
+						<figure id="links">
+							<a href="https://github.com/zachraab/note-taker">Source Code</a>
+							<a href="https://secret-shore-64376.herokuapp.com/"
+								>Deployed Application</a
+							>
+						</figure>
+						<img
+						class="transform"
+						src="./assets/images/project-screenshots/note-taker.PNG"
+						alt="rocky mountain national park"
+						/>
+						<h3 class="imgtext">Note Taker</h3>
+					</div>
 
-          <div class="card">
-            <figure id="links">
-              <a href="https://github.com/Ajurgs/React_Adventure_Game"
-                >Source Code</a
-              >
-              <a href="https://dry-mountain-02487.herokuapp.com/"
-                >Deployed Application</a
-              >
-              <p><small>Turn-based game built with JS</small></p>
-            </figure>
-            <img
-              class="transform"
-              src="./assets/images/project-screenshots/haunted-caverns.PNG"
-              alt="Ice Lakes Basin"
-            />
-            <h3 class="imgtext">The Haunted Caverns</h3>
-          </div>
+					<div class="card">
+						<figure id="links">
+							<a href="https://github.com/zachraab/budget-tracker"
+								>Source Code</a
+							>
+							<a href="https://lit-earth-30357.herokuapp.com/"
+								>Deployed Application</a
+							>
+						</figure>
+						<img
+						class="transform"
+						src="./assets/images/project-screenshots/budget-tracker.PNG"
+						alt="Snowy Aspen, Colorado"
+						/>
+						<h3 class="imgtext">Budget Tracker</h3>
+					</div>
+				</section>
+			</section>
+		</main>
 
-          <div class="card">
-            <figure id="links">
-              <a href="https://github.com/zachraab/tech-blog">Source Code</a>
-              <a href="https://boiling-bastion-61605.herokuapp.com/login"
-                >Deployed Application</a
-              >
-              <p><small>User-authenticated blog</small></p>
-            </figure>
-            <img
-              class="transform"
-              src="./assets/images/project-screenshots/tech-blog.PNG"
-              alt="Lone Eagle Peak"
-            />
-            <h3 class="imgtext">Tech Blog</h3>
-          </div>
+		<!-- Footer Container -->
+		<footer>
+			<div id="triangle-2"></div>
+			<div id="triangle-3"></div>
+			<div id="triangle-4"></div>
+			<div id="triangle-5"></div>
 
-          <div class="card">
-            <figure id="links">
-              <a href="https://github.com/zachraab/employee-generator"
-                >Source Code</a
-              >
-              <a
-                href="https://zachraab.github.io/employee-generator/my-team.html"
-                >Deployed Application</a
-              >
-              <p><small>Back-end manager organization tool</small></p>
-            </figure>
-            <img
-              class="transform"
-              src="./assets/images/project-screenshots/employee-generator.PNG"
-              alt="picture of ridgeway colorado"
-            />
-            <h3 class="imgtext">Employee Generator</h3>
-          </div>
+			<div id="footer-container">
+				<br />
+				<ol id="contact-info">
+					<li id="contact-name">
+						<strong><span id="logo">Zach</span>Raab</strong>
+					</li>
+					<br />
+					<li class="contact-link">
+						<a href="mailto:zpraab@gmail.com">zpraab@gmail.com</a>
+					</li>
+					<li class="contact-link">
+						<a href="https://github.com/zachraab">GitHub</a>
+					</li>
+					<li class="contact-link">
+						<a href="https://www.linkedin.com/in/zachary-raab-61578248/"
+							>LinkedIn</a
+						>
+					</li>
+				</ol>
+				<br />
+			</div>
+			<!-- <button id="top-btn">Top</button> -->
+		</footer>
 
-          <div class="card">
-            <figure id="links">
-              <a href="https://github.com/zachraab/note-taker">Source Code</a>
-              <a href="https://secret-shore-64376.herokuapp.com/"
-                >Deployed Application</a
-              >
-              <p><small>Web application that stores notes</small></p>
-            </figure>
-            <img
-              class="transform"
-              src="./assets/images/project-screenshots/note-taker.PNG"
-              alt="rocky mountain national park"
-            />
-            <h3 class="imgtext">Note Taker</h3>
-          </div>
-
-          <div class="card">
-            <figure id="links">
-              <a href="https://github.com/zachraab/budget-tracker"
-                >Source Code</a
-              >
-              <a href="https://lit-earth-30357.herokuapp.com/"
-                >Deployed Application</a
-              >
-              <p><small>Tool that tracks spending and income</small></p>
-            </figure>
-            <img
-              class="transform"
-              src="./assets/images/project-screenshots/budget-tracker.PNG"
-              alt="Snowy Aspen, Colorado"
-            />
-            <h3 class="imgtext">Budget Tracker</h3>
-          </div>
-
-          <div class="card">
-            <figure id="links">
-              <a href="https://github.com/zachraab/weather-dashboard"
-                >Source Code</a
-              >
-              <a href="https://zachraab.github.io/weather-dashboard/"
-                >Deployed Application</a
-              >
-              <p><small>Returns forecast at user's location</small></p>
-            </figure>
-            <img
-              class="transform"
-              src="./assets/images/project-screenshots/weather-dashboard.PNG"
-              alt="flatirons"
-            />
-            <h3 class="imgtext">Weather Dashboard</h3>
-          </div>
-
-          <div class="card">
-            <figure id="links">
-              <a
-                href="https://github.com/zachraab/high-seas-trading-game/blob/main/combat.gif"
-                >Combat Demo</a
-              >
-              <a
-                href="https://github.com/zachraab/high-seas-trading-game/blob/main/UI.gif"
-                >UI Demo</a
-              >
-              <p><small>Economy management video game</small></p>
-            </figure>
-            <img
-              class="transform"
-              src="./assets/images/project-screenshots/unity-game.PNG"
-              alt="Rocky Mountains National Park"
-            />
-            <h3 class="imgtext">High Seas Trading</h3>
-          </div>
-        </section>
-      </section>
-    </main>
-
-    <!-- Footer Container -->
-    <footer>
-      <div id="triangle-2"></div>
-      <div id="triangle-3"></div>
-      <div id="triangle-4"></div>
-      <div id="triangle-5"></div>
-
-      <h2 id="contact-headline">Contact</h2>
-
-      <div id="footer-container">
-        <br />
-        <ol id="contact-info">
-          <div id="stripe-2"></div>
-          <li id="contact-name">
-            <strong><span id="logo">Zach</span>Raab</strong>
-          </li>
-          <br />
-          <li class="contact-link">
-            <a href="mailto:zpraab@gmail.com">zpraab@gmail.com</a>
-          </li>
-          <li class="contact-link">
-            <a href="https://github.com/zachraab">GitHub</a>
-          </li>
-          <li class="contact-link">
-            <a href="https://www.linkedin.com/in/zachary-raab-61578248/"
-              >LinkedIn</a
-            >
-          </li>
-        </ol>
-        <br />
-      </div>
-      <button id="top-btn">Top</button>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="script.js"></script>
+	</body>
 </html>

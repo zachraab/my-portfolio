@@ -5,11 +5,6 @@
   margin: 0;
 }
 
-#avatar {
-  transition-duration: 1s;
-  border-radius: 150px;
-}
-
 /* general styling */
 body {
   background-color: cornflowerblue;
@@ -63,7 +58,7 @@ h1::after {
 header {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 40px;
   margin: 0;
   font-size: 2rem;
   justify-content: space-between;
@@ -107,15 +102,6 @@ nav a:focus {
   border-radius: 50%;
 }
 
-main section p {
-  padding: 18vw 5vw 5vw 5vw;
-}
-
-p::first-line {
-  text-indent: 50px;
-  color: violet;
-}
-
 /* styled div's */
 
 /* DIAMONDS */
@@ -123,7 +109,7 @@ p::first-line {
   height: 0;
   width: 0;
   left: 50%;
-  top: 50%;
+  top: 0;
   position: absolute;
   border: 7vw solid transparent;
   border-bottom: 10vw solid darkcyan;
@@ -147,7 +133,7 @@ p::first-line {
   height: 0;
   width: 0;
   left: 50%;
-  top: 50%;
+  top: 0;
   position: absolute;
   border: 5vw solid transparent;
   border-bottom: 7vw solid violet;
@@ -182,32 +168,30 @@ p::first-line {
   position: absolute;
   height: 7vw;
   width: 7vw;
-  top: 50%;
+  top: 0;
   left: 50%;
   border-radius: 100%;
   background-image: radial-gradient(
     circle,
     cornflowerblue 30%,
     yellow,
-    transparent 40%
+    /* transparent 40% */
   );
   box-shadow: yellow 0 0 10px;
   transform: translate(-50%, 50%);
   transition-duration: 1s;
 }
 
+/* Makes empty space between shapes hoverable */
 #helper {
-  /* background: black; */
-  height: 23vw;
-  width: 15vw;
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  transform: translate(-50%, 20%);
+  height: 100%;
+  width: 100%;
 }
 
 #diamond-container {
-  background: red;
+  position: relative;
+  height: 23vw;
+  width: 15vw;
 }
 
 #diamond-container:hover #diamond-2::before {
@@ -228,24 +212,10 @@ p::first-line {
   transition-duration: 1s;
 }
 
-#diamond-container:hover #circle-2 {
-  height: 7.5vw;
-  width: 7.5vw;
-  transform: translate(-50%, 11.75vw);
-  transition-duration: 1s;
-  cursor: pointer;
-}
-
 #diamond-container:hover #diamond-1 {
   border-bottom: 7vw solid darkcyan;
   transition-delay: 0.5s;
   transition-duration: 1s;
-}
-
-#diamond-container:active #circle-2 {
-  transform: translate(-50%, 11.75vw) scale(0.25) skew(45deg, 45deg)
-    rotate(360deg);
-  transition-duration: 0.5s;
 }
 
 /* triangles */
@@ -326,7 +296,7 @@ p::first-line {
   height: 20vw;
   width: 20vw;
   left: 5vw;
-  bottom: 5vw;
+  top: 100%;
   border-radius: 50%;
   position: absolute;
   background-image: linear-gradient(
@@ -337,47 +307,18 @@ p::first-line {
   );
 }
 
-#circle-2 {
-  /* z-index: -1; */
-  height: 0vw;
-  width: 0vw;
-  /* top: 7vw; */
-  left: 50%;
-  top: 50%;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-50%, 11.75vw) skew(0, 0) scale(1) rotate(0deg);
-  background-image: linear-gradient(
-    to bottom,
-    violet 10%,
-    darkcyan,
-    yellow 90%
-  );
-  transition-duration: 1s;
-}
-
 /* stripes */
 #stripe-1 {
   z-index: -2;
   height: 20vw;
   width: 100%;
-  /* top: 80%; */
-  bottom: -5vw;
+  top: 115%;
   right: 50%;
   transform: skewY(-26deg) translate(50%, 50%);
   position: absolute;
   background-image: linear-gradient(to bottom right, violet, cornflowerblue);
 }
-#stripe-2 {
-  z-index: -3;
-  position: absolute;
-  height: 10vw;
-  width: 20vw;
-  border-top-right-radius: 50%;
-  border-top: yellow 0.4vw solid;
-  overflow: hidden;
-  transform: skewY(10deg) translateX(20%);
-}
+
 #stripe-3 {
   z-index: -2;
   height: 20vw;
@@ -469,23 +410,24 @@ p::first-line {
   border-radius: 20px;
 }
 
-.card p small {
-  font-size: 1vw;
-  white-space: nowrap;
+.card p {
+  margin-top: 20px;
+  font-size: 20px;
 }
 
 #workflex {
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 115px;
+  padding-top: 250px;
 }
 
-header img {
-  width: 25%;
-  height: 25%;
+#avatar {
+  width: 100%;
+  height: fit-content;
+  border-radius: 50%;
 }
 
-div img {
+.card img {
   width: 100%;
   height: 100%;
   border-radius: 15px;
@@ -500,8 +442,8 @@ div img {
 div:hover .transform {
   filter: saturate(100%);
   transition-duration: 1s;
-  box-shadow: 0px 0px 30px 10px black;
-  transform: scale(2);
+  box-shadow: 0px 0px 10px black;
+  transform: scale(1.125);
   position: absolute;
   z-index: 2;
   cursor: pointer;
@@ -509,15 +451,14 @@ div:hover .transform {
 
 .imgtext {
   position: absolute;
-  top: 15px;
+  top: 0;
   left: 0;
-  padding: 5px;
-  margin: 5px;
+  padding: 10px;
+  margin: 20px;
   font-size: 1.5vw;
   background-color: darkcyan;
   box-shadow: black 0 0 10px;
-  border-radius: 10px 10px 0 0;
-  transform: skewY(10deg);
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -571,7 +512,7 @@ a:focus {
 /* aside bar styling */
 .sidebar {
   border-right: solid darkcyan 5px;
-  padding: 20px;
+  padding: 40px;
   flex: 2 4 1500px;
   min-width: 15%;
   display: flex;
@@ -581,7 +522,8 @@ a:focus {
 }
 
 aside h2 {
-  margin: 20vw 2vw;
+  text-align: center;
+  margin: 20px auto;
   font-size: 3vw;
 }
 
@@ -623,6 +565,7 @@ footer {
 }
 
 #contact-name {
+  width: fit-content;
   font-size: 2vw;
   border-bottom: white solid 0.2vw;
   font-family: Arial, Helvetica, sans-serif;
@@ -729,7 +672,6 @@ footer #top-btn:active {
 
   main section p {
     font-size: smaller;
-    padding: 150px 30px 30px;
   }
 
   aside h2 {
